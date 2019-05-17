@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Demo_Prism.Views.DemoListView"
+             Title="Demo List View">
+    <ContentPage.Content>
+       
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            
+            <Label Text="listview" HorizontalOptions="CenterAndExpand"/>
+            <Entry Placeholder="Stt" x:Name="entrystt" Keyboard="Numeric"/>
+            <Entry Placeholder="Name" x:Name="entryname" Completed="entry_complete"/>
+            <ListView  x:Name="demolist" ItemsSource="{Binding Items}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Stt}" Detail="{Binding Name}"/>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add" Clicked="BtnAdd_Clicker" HorizontalOptions="Start"/>
+                <Button Text="Delete" Clicked="BtnDel_Clicker" HorizontalOptions="CenterAndExpand"/>
+                <Button Text="Clear" Clicked="BtnClear_Clicker" HorizontalOptions="End"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

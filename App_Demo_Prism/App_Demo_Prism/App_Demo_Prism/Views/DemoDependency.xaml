@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Demo_Prism.Views.DemoDependency"
+             Title="Demo Denpendency">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Speak text"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="text to speak" x:Name="txt"/>
+            <Button Text="Speak" Clicked="BtnSpeak_click"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
